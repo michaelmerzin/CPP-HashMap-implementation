@@ -538,8 +538,7 @@ class HashMap
         index_in_vec1++;
         return *this;
       }
-      if (index_in_vec1 == a.table[index_for_vec1].size ()
-                           - 1)/// check if we in the end of the vector
+      if (index_in_vec1 == a.table[index_for_vec1].size () - 1)/// check if we in the end of the vector
       {
         int check = -1;
         //// check if we find new vector
@@ -584,26 +583,7 @@ class HashMap
     { return &(operator* ()); }
   };
 
-  // using iterator = Iterator;
   using const_iterator = ConstIterator;
-
-//  Iterator begin ()
-//  {
-//    if (M == 0)
-//    {
-//      return Iterator (capacity1 + 1, 0, *this);
-//    }
-//    for (unsigned int i = 0; i < table->size (); ++i)
-//    {
-//      if (table[i].size () != 0)
-//      {
-//        return Iterator (i, 0, *this);
-//      }
-//    }
-//    return Iterator (capacity1 + 1, 0, *this);
-//
-//
-//  }
 
   const_iterator begin () const
   {
@@ -639,8 +619,6 @@ class HashMap
     return const_iterator (capacity1 + 1, 0, *this);
   }
 
-//  Iterator end ()
-//  { return Iterator (capacity1 + 1, 0, *this); }
   const_iterator end () const
   { return const_iterator (this->capacity1 + 1, 0, *this); }
   const_iterator cend () const
